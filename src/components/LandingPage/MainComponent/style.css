@@ -1,0 +1,110 @@
+.main{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 8px 48px;
+}
+.left-component{
+    margin-top: 50px;
+}
+.lf1,.lf2{
+    font-size: 125px;
+    margin: 0;
+}
+.lf1{
+    /*This lines are used to give border-color to text*/
+    color: var(--white);  /*color of text*/
+    -webkit-text-stroke-width: 3px;  /*width of text border*/
+    -webkit-text-stroke-color: var(--white); /*color of text border*/
+}
+.lf1:hover{
+    color: var(--black); /*on hover text color change to black*/
+    -webkit-text-stroke-color: var(--white); /* and text border color changes to white*/
+    transition: all 0.3s;
+}
+
+.lf2{
+    color: var(--blue);
+}
+.info{
+    font-size: 16px;
+    color: var(--grey);
+}
+.btn-main{
+    display: flex;
+    justify-content: flex-start;
+    gap: 24px;
+    align-items: center;
+    margin-top: 52px;
+}
+.right-component{
+    width: 40%;
+    position: relative;
+    padding: 16px;
+    margin-right: 10px;
+}
+.iPhone{
+    position: absolute;
+    z-index: 10;
+    min-width: 300px;
+    width: 60%;
+    right: 0;
+}
+.shadow{
+    position: absolute;
+    min-width: 250px;
+    width: 50%;
+    right: 0;
+    top: 120px;
+}
+@media screen and (max-width:1250px) {
+    .lf1,.lf2{
+        font-size:80px;
+        margin: 0;
+    }
+}
+@media screen and (max-width:1000px){
+    .iPhone{
+        min-width: 250px;
+        width: 50%;
+    }
+    .shadow{
+
+        min-width: 200px;
+        top: 80px;
+    } 
+}
+@media screen and (max-width:800px){
+    .main{
+        display: flex;
+        flex-direction: column;
+    }
+    .right-component{
+        display: block;
+        margin:auto ;
+        margin-top: 50px;
+    }
+    .iPhone{
+        left: -60px;
+    }
+    .shadow{
+        left: 16px;
+    }
+    .left-component{    
+        width: 100%;
+    }
+    .lf1,.lf2{
+        font-size: 48px;
+        text-align: center;
+    }
+    .lf1{
+        -webkit-text-stroke-width: 1px;
+    }
+    .info{
+        text-align: center;
+
+    }
+    .btn-main{
+        justify-content: center;
+    }
+}

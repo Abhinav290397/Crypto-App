@@ -1,0 +1,146 @@
+.grid-container{
+    width: 330px;
+    height: 330px;
+    background-color: var(--darkgrey);
+    border: 2px solid var(--darkgrey);
+    border-radius: 0.75rem;
+    transition: transform 0.5s ease; /*To give the increasing transition to div*/
+}
+.Green:hover{
+    border: 1px solid var(--green); 
+    transform: scale(1.04);
+    box-shadow: 2px 2px 8px var(--green);
+    .details{
+        color: var(--white);
+    }
+}
+.Red:hover{
+    border: 1px solid var(--red); 
+    transform: scale(1.04);
+    box-shadow: 2px 2px 8px var(--red);
+    .details{
+        color: var(--white);
+    }
+}
+.Info{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    margin:  1.5rem;
+}
+.coin-logo{
+    height: 3.5rem;
+    width: 3.5rem;
+}
+.name-info{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    
+}
+.coin-symbol{
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: 0;
+}
+.coin-name{
+    color: var(--grey);
+    text-transform: capitalize;
+    font-weight: light;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.chip-flex{
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    align-items: center;
+    margin: 1rem 1.5rem;
+}
+.price-chip{
+    border: 2px solid var(--green);
+    border-radius: 2rem;
+    padding: 0.5rem 1rem; 
+    text-align: center;
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--green);
+}
+.price-chip:hover{
+    background-color: var(--green);
+    color: var(--white);
+    transition: all 0.3s;
+}
+.chip-red{
+    border: 2px solid var(--red);
+    color: var(--red);
+}
+.chip-red:hover{
+    background-color: var(--red);
+    color: var(--white);
+    transition: all 0.3s;
+}
+
+.trend-chip{
+    border: 2px solid var(--green);
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    color: var(--green);
+}
+.trend-chip:hover{
+    background-color: var(--green);
+    color: var(--white);
+}
+.red{
+    color: var(--red);
+    border: 2px solid var(--red);
+}
+.red:hover{
+    background-color: var(--red);
+    color: var(--white);
+}
+.price-container{
+    margin: 1.5rem;
+}
+.price-container > h3{
+    color: var(--green);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.lower{
+    margin-top: 40px;
+}
+.details:hover{
+    color: var(--white);
+}
+.details{
+    color: var(--grey);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.watchlist-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--green);
+    border-radius: 50%;
+    color: var(--green);
+    padding: 0.5rem;
+    height: 1.5rem;
+    width: 1.5rem !important;
+    margin-left: 90px;
+  }
+  .watchlist-icon-red {
+    border: 2px solid var(--red);
+    color: var(--red);
+  }

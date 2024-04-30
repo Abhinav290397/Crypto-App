@@ -1,13 +1,73 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root{
+  --white:#fff;
+  --black:#111;
+  --blue:#3a80e9;
+  --grey:#888;
+  --darkgrey:#1b1b1b;
+  --green:#61ce6f;
+  --red:#f94141;
+}
+html{
+  scroll-behavior: smooth; /*for smooth scrolling*/
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+ 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  height: 110vh;
+  background-color: var(--black);
+  color: var(--white);
+  font-family: "Inter", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+::selection{ /*When we do ctrl+A all text are selection, using this 'selection' we can change the background color of that*/
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+/*Making scrollbar*/
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: black;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:var(--blue);
+  border-radius: 5px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blue);
+}
+
+a{
+  color: var(--white);
+  text-decoration: none;
+}
+
+.grey-wrapper{
+  display: block;
+  width: 93%;
+  background-color: var(--darkgrey);
+  margin: 1.5rem;
+  border-radius: 0.8rem;
+  padding: 0.5rem 0.5rem;
+  margin-left: 3rem;
+}
+
+.compareCrypto-days{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 1.5rem;
+  gap: 2rem;
 }

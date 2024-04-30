@@ -1,0 +1,11 @@
+.loader-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 98vw;
+    height: 95vh;
+    background-color: var(--black);
+    color: var(--blue);
+   position: absolute;
+    z-index: 10;
+}
