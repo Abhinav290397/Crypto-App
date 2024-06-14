@@ -35,7 +35,7 @@ const Grids = ({ x, index, delay }) => {
           <p className="coin-symbol">{x.symbol}</p>
           <p className="coin-name">{x.name}</p>
         </div>
-        <div className={`watchlist-icon ${x.price_change_percentage_24h < 0 && "watchlist-icon-red"}`} onClick={(event) => starFunc(event)}>
+        <div className={ x.price_change_percentage_24h < 0 ? "watchlist-icon-red" : "watchlist-icon-green"} onClick={(event) => starFunc(event)}>
           {
             isCoinAdded ? <StarIcon/> : <StarOutlineIcon/>
           }

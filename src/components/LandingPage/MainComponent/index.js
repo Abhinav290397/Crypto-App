@@ -4,6 +4,9 @@ import shadow from "../../../assets/shadow.png";
 
 import {motion} from "framer-motion";  //We r uning framer motion library to give animations,Do 'npm i framer-motion' to give animation to the components and use this way <motion.tagName></motion.tagName>
 import "./style.css";
+import { Link } from "react-router-dom";
+import { RWebShare } from "react-web-share";  // npm i react-web-share
+import { toast } from "react-toastify";
 const MainComponent = () => {
     return(
         <div className="main">
@@ -14,8 +17,12 @@ const MainComponent = () => {
                 <motion.p className="info" initial={{opacity:0,scale:0}} animate={{opacity:1,scale:1}} transition={{duration:1,delay:0.3}}>Track crypto through a public api in real time. Visit the dashboard to do so!</motion.p>
 
                 <motion.div className="btn-main" initial={{opacity:0,x:50}} animate={{opacity:1,x:1}} transition={{duration:0.5,delay:1}}>
-                    <Button text={"Dashboard"} />
-                    <Button text={"Share"} outlined={true} />
+                    <Link to="/dashboard">
+                        <Button text={"Dashboard"} />
+                    </Link>
+                    <RWebShare data={{text:"Like humans, flamingos make friends for life.", url:"https://crypto-dashboard-jan.netlify.app", title:"CryptoTracker"}} onClick={() => console.log("shared successfully!")}>
+                        <Button text={"Share"} outlined={true} />
+                    </RWebShare>
                 </motion.div>
             </div>  
 

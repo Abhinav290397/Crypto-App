@@ -10,6 +10,22 @@
   --green:#61ce6f;
   --red:#f94141;
 }
+
+
+[data-theme="dark"] {
+  --white: #ffffff;
+  --black: #111;
+  --grey: #888;
+  --darkgrey: #1b1b1b;
+}
+
+[data-theme="light"] {
+  --white: #111;
+  --black: #fff;
+  --grey: #888;
+  --darkgrey: #f3f3f3;
+}
+
 html{
   scroll-behavior: smooth; /*for smooth scrolling*/
 }
@@ -23,6 +39,17 @@ body {
   background-color: var(--black);
   color: var(--white);
   font-family: "Inter", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  color: var(--white);
 }
 
 ::selection{ /*When we do ctrl+A all text are selection, using this 'selection' we can change the background color of that*/
@@ -70,4 +97,10 @@ a{
   align-items: center;
   margin: 1.5rem;
   gap: 2rem;
+}
+
+.air{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

@@ -35,7 +35,7 @@ const CoinPage = () => {
     async function getData(){
         const Data = await getCoinData(id);
         if(Data){
-            coinObject(setCoinData,Data); //Data is coming in different naming so we pass it to coinObject fn.
+            coinObject(Data, setCoinData); //Data is coming in different naming so we pass it to coinObject fn.
 
             const prices = await getCoinPrices(id,days,priceType);
             if(prices){

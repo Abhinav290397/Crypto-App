@@ -19,9 +19,7 @@
 .list-container:hover{
     background-color: var(--darkgrey);
     transform:scale(1.02);
-    .details{
-        color: white;
-    }
+    
 }
 .Green:hover{
     border: 1px solid var(--green); 
@@ -54,3 +52,37 @@
         display: block;
     }
 }
+
+.watchlist-icon-green{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--green);
+    border-radius: 50%;
+    color: var(--green);
+    padding: 0.5rem;
+    height: 1.5rem;
+    width: 1.5rem !important;
+    margin-right: 30px;
+  }
+  .watchlist-icon-green:hover{
+    color: var(--white);
+    background-color: var(--green);
+  }
+
+  .watchlist-icon-red {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--red);
+    border-radius: 50%;
+    color: var(--red);
+    padding: 0.5rem;
+    height: 1.5rem;
+    width: 1.5rem !important;
+    margin-right: 30px;
+  }
+  .watchlist-icon-red:hover{
+    color: var(--white);
+    background-color: var(--red);
+  }

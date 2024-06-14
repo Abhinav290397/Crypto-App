@@ -30,6 +30,7 @@
     display: none;     /*drawer will not visible in desktop view.*/
 }
 
+/*mobile view*/
 @media screen and (max-width:800px) {
     .navbar{
         padding: 24px;

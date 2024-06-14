@@ -2,17 +2,36 @@ import "./style.css";
 
 import TrendingUpRoundedIcon from '@mui/icons-material/TrendingUpRounded'; //from MUI
 import TrendingDownRoundedIcon from '@mui/icons-material/TrendingDownRounded';
+
 import { Tooltip } from "@mui/material";
+
 import convertNumber from "../../../functions/convertNumbers";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import {motion} from "framer-motion";
+import StarIcon from "@mui/icons-material/Star";
+import StarOutlineIcon from "@mui/icons-material/StarOutline";
+import removeFromWatchList from "../../../functions/removeFromWatchList";
+import saveItemToWatchlist from "../../../functions/saveItemToWatchlist";
 
-const List = ({x,index}) => {
-    if(!x){
-        return null;
-    }    
+const List = ({x,index, delay }) => {
+    
+    const watchlist = JSON.parse(localStorage.getItem("wishlist"));
+
+    const[isCoinAdded, setIsCoinAdded] = useState(watchlist?.includes(x.id));  //It is same like watchlist ? watchlist.includes(coin.id) : false
+
+    const starFunc = (event) => {
+        if(isCoinAdded){
+            removeFromWatchList(event, x.id, setIsCoinAdded);
+        }else{
+            setIsCoinAdded(true);
+            saveItemToWatchlist(event, x.id);
+        }
+    }
+
     return(
         <Link to={`/coin/${x.id}`}>
-         <tr className= {`list-container ${x.price_change_percentage_24h > 0 ? "Green" : "Red"}`} key={index}>
+         <motion.tr className= {`list-container ${x.price_change_percentage_24h > 0 ? "Green" : "Red"}`} key={index} initial={{opacity:0,x:-80}} whileInView={{opacity:1,x:0}} transition={{duration:0.5,delay:delay}}>
             <Tooltip title="coin info" placement="bottom-start"> 
                 <td className="image-td">
                     <img src={x.image} className="coin-logo" draggable="false" />
@@ -71,7 +90,13 @@ const List = ({x,index}) => {
                     <p className="details"> ${convertNumber(x.market_cap)}</p>
                </td>
             </Tooltip>
-        </tr>
+
+            <td className={x.price_change_percentage_24h < 0 ? "watchlist-icon-red" : "watchlist-icon-green"} onClick={(event) => starFunc(event)}>
+                {
+                    isCoinAdded ? <StarIcon/> : <StarOutlineIcon/>
+                }
+            </td>
+        </motion.tr>
         </Link>
     )
 }

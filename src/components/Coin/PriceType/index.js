@@ -9,7 +9,7 @@ export default function TogglePriceType({priceType,handlePriceTypeChange}) {
 
   return (
     <div className="toggle-prices">
-        <ToggleButtonGroup
+      <ToggleButtonGroup
       value={priceType}
       exclusive
       onChange={handlePriceTypeChange}

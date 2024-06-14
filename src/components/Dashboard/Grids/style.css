@@ -128,7 +128,7 @@
     font-weight: 400;
 }
 
-.watchlist-icon {
+.watchlist-icon-green{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -140,7 +140,24 @@
     width: 1.5rem !important;
     margin-left: 90px;
   }
+  .watchlist-icon-green:hover{
+    color: var(--white);
+    background-color: var(--green);
+  }
+
   .watchlist-icon-red {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 2px solid var(--red);
+    border-radius: 50%;
     color: var(--red);
+    padding: 0.5rem;
+    height: 1.5rem;
+    width: 1.5rem !important;
+    margin-left: 90px;
+  }
+  .watchlist-icon-red:hover{
+    color: var(--white);
+    background-color: var(--red);
   }

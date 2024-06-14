@@ -9,6 +9,7 @@ import ScrollTop from "../components/Common/ScrollTop/scrolltop";
 import get100Coins from "../functions/get100Coins";
 
 const DashboardPage = () => {
+
     const[coins,setCoins] = useState([]);
 
     const[paginatedCoins,setPaginatedCoins] = useState([]);
